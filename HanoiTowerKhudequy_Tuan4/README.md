@@ -42,7 +42,18 @@ Giải bài toán tháp Hà Nội nhưng không dùng phương pháp đệ quy
         }
 
     ```
-
+    * so_buoc: Để tính số bước phải sử dụng
+    * chi_so: Để tính đĩa trên cùng của 1 cột
+    ```c
+        int chi_so(int A[],int n){
+            for(int i=n-1;i<=0;i--) {
+                if(A[i]==1) {
+                    return n-i;
+                }
+            }
+        }
+    ```
+    * sang : Để xác định khi cần di chuyển đĩa từ cột trung gian hoặc cột đích, thì đĩa nên sang cột nào
 * Với trường hợp di chuyển đĩa 1 thì có thể chuyển sang B hoặc C; nhưng nhận thấy có 2 trường hợp:
     * Nếu n chẵn: thì nên di chuyển đĩa 1 sang cột C
     * Nếu n lẻ : thì nên di chuyển đĩa 1 sang cột B
